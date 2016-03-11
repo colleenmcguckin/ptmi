@@ -1,1 +1,176 @@
+%header
+  .info-container.row
+    .logo.col-xs-4
+      =image_tag 'ptmi-logo.png', class: 'logo-img'
+    %span#one
+    .name.col-xs-8
+      .heading Pro-Tek Mechanical
+      .sub-heading 24-Hour Phone: 847 540 0955
+      .sub-text Chicago & Surrounding Suburbs
+  .nav#nav
+    %ul.nav.navbar-nav
+      %li
+        %a{ href: "#one"}Pharmaceutical/Lab
+      %li
+        %a{ href: "#two"}Commercial
+      %li
+        %a{ href: "#three"}Residential
+      %li
+        %a{ href: "#four"}About
+      %li
+        %a{ href: "#five"}Contact
+      %li
+        %a{ href: "#six"}Safety
+%body
+  %span#two
+  #slide1.container
+    .heading Pharmaceutical/Lab
+    .sub-heading
+    .sub-text
+      Man bun semiotics slow-carb pinterest pork belly viral, echo park sriracha. Celiac iPhone umami kinfolk pitchfork. Bitters letterpress master cleanse vinyl. Waistcoat intelligentsia fanny pack, lumbersexual try-hard williamsburg keffiyeh distillery shabby chic aesthetic. Gastropub chillwave vice kombucha farm-to-table, twee narwhal cliche mumblecore butcher. Raw denim microdosing wayfarers, irony narwhal brunch butcher pitchfork viral paleo. Mustache crucifix shabby chic, gochujang pickled distillery small batch tofu mlkshk chillwave kombucha lomo.
+  %span#three
+  #slide2.container
+    .heading Commercial
+    .sub-heading
+    .sub-text
+      Vice hammock put a bird on it echo park mustache, ugh biodiesel sartorial. Franzen four loko pabst twee listicle. Jean shorts YOLO chartreuse ugh franzen, flexitarian marfa selvage kale chips polaroid beard freegan paleo. Photo booth fashion axe paleo, heirloom green juice four loko pork belly distillery truffaut offal mumblecore before they sold out. Knausgaard chia banh mi before they sold out messenger bag brunch. Craft beer pop-up waistcoat deep v sriracha venmo, organic meggings wolf iPhone food truck helvetica chillwave normcore. Sustainable keytar narwhal cliche, master cleanse actually roof party intelligentsia cray humblebrag gochujang meh flexitarian truffaut street art.
+  %span#four
+  #slide3.container
+    .heading Residential
+    .sub-heading
+    .sub-text
+      Pickled tacos hammock chartreuse intelligentsia. 8-bit fanny pack cred umami small batch. Distillery before they sold out squid gentrify pork belly. Venmo food truck blue bottle you probably haven't heard of them pug lo-fi XOXO, fixie swag raw denim cardigan hammock poutine wayfarers austin. Single-origin coffee farm-to-table tote bag butcher tumblr brunch. Health goth crucifix humblebrag williamsburg, deep v wayfarers trust fund photo booth PBR&B twee. Authentic selfies chillwave aesthetic salvia, 8-bit vice wayfarers.
+  %span#five
+  #slide4.container
+    .heading About
+    .sub-heading
+    .sub-text
+      Hoodie gochujang banjo seitan. Semiotics flannel ramps, gochujang selfies distillery waistcoat truffaut schlitz. Typewriter fixie 8-bit blue bottle, humblebrag farm-to-table VHS meditation master cleanse mlkshk listicle. Tofu plaid narwhal, man braid pop-up synth roof party crucifix viral scenester fixie XOXO. Gentrify polaroid 90's, affogato salvia pug actually photo booth tumblr brunch roof party scenester kogi ugh tousled. Sriracha chicharrones chambray try-hard helvetica, chartreuse austin authentic vegan swag seitan readymade gentrify. IPhone banh mi art party chambray disrupt, post-ironic portland pop-up squid cardigan XOXO fixie.
+  %span#six
+  #slide5.container
+    .heading Contact
+    .sub-heading
+    .sub-text
+      Pabst crucifix semiotics blog letterpress, portland messenger bag umami ramps raw denim shoreditch mumblecore pug literally. Keytar etsy green juice, bespoke squid heirloom farm-to-table blue bottle YOLO. Twee affogato bespoke neutra, lumbersexual artisan food truck selvage messenger bag heirloom biodiesel umami. Locavore intelligentsia four dollar toast umami. Farm-to-table +1 vegan franzen art party. Shabby chic poutine pork belly, hashtag readymade authentic neutra before they sold out kinfolk quinoa ennui truffaut humblebrag flexitarian. Organic photo booth street art, franzen meggings roof party DIY 8-bit lo-fi yr humblebrag.
+  #slide6.container
+    .heading Safety
+    .sub-heading
+    .sub-text
+      Pug aesthetic art party biodiesel, skateboard you probably haven't heard of them 90's bitters pop-up neutra plaid vinyl mustache pickled. Pug yr listicle four loko, cred fashion axe irony semiotics tumblr freegan. Ethical before they sold out poutine, helvetica 3 wolf moon raw denim paleo humblebrag hoodie listicle. Hashtag keffiyeh etsy, VHS pickled pork belly paleo bicycle rights iPhone. Helvetica portland craft beer ugh, master cleanse bicycle rights banjo aesthetic salvia 3 wolf moon. Listicle 8-bit pabst, neutra polaroid bicycle rights kogi. Cred 90's letterpress, deep v kitsch cray banjo you probably haven't heard of them.
+  %footer.footer
+    .partner-companies.row
+      %ul
+        %li Lorem
+        %li Lorem
+        %li
+          .mailing-list-container
+            %p Join our mailing list:
+            %button.btn.btn-primary.btn-lg{"data-target" => "#myModalHorizontal", "data-toggle" => "modal"}
+              Launch Horizontal Form
+            .email-signup
+              %label Enter Email
+              %input{type: 'text'}
+              %button{type: 'submit'} Submit
+        %li Lorem
+        %li Lorems
+  #myModalHorizontal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
+  .modal-dialog
+    .modal-content
+      / Modal Header
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title
+          Modal title
+      / Modal Body
+      .modal-body
+        %form.form-horizontal{:role => "form"}
+          .form-group
+            %label.col-sm-2.control-label{:for => "inputEmail3"} Email
+            .col-sm-10
+              %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              %button.btn.btn-default{:type => "submit"} Sign in
+      / Modal Footer
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+          Close
+        %button.btn.btn-primary{:type => "button"}
+          Save changes
+:coffee
+  $ ->
 
+    windowScrollTop = ->
+      window.pageYOffset
+
+    Menu = ((scrollOffset) ->
+      `var Menu`
+
+      Menu = ->
+        @element = document.getElementById('nav')
+        @element.className = 'docked'
+        @docked = false
+        @initialOffsetTop = 0
+        @resetInitialOffsetTop()
+        return
+
+      Menu.prototype =
+        offsetTop: ->
+          @element.offsetTop
+        resetInitialOffsetTop: ->
+          @initialOffsetTop = @offsetTop()
+          return
+        dock: ->
+          @element.className = 'docked'
+          @docked = true
+          return
+        undock: ->
+          @element.className = @element.className.replace('docked', 'undocked')
+          @docked = false
+          return
+        toggleDock: ->
+          if @docked == false and @offsetTop() - scrollOffset() < 0
+            @dock()
+          else if @docked == true and scrollOffset() <= @initialOffsetTop
+            @undock()
+          return
+      Menu
+    )(windowScrollTop)
+    menu = new Menu
+
+    window.onscroll = ->
+      menu.toggleDock()
+      return
+
+    updateMenuTop = ->
+      # Shortly dock to reset the initial Y-offset
+      menu.undock()
+      menu.resetInitialOffsetTop()
+      # If appropriate, undock again based on the new value
+      menu.toggleDock()
+      return
+
+    zoomListeners = [ updateMenuTop ]
+    do ->
+      w = window
+      d = document
+      e = d.documentElement
+      g = d.getElementsByTagName('body')[0]
+      lastWidth = 0
+
+      pollZoomFireEvent = ->
+        widthNow = w.innerWidth or e.clientWidth or g.clientWidth
+        if lastWidth == widthNow
+          return
+        lastWidth = widthNow
+        # Length changed, user must have zoomed, invoke listeners.
+        i = zoomListeners.length - 1
+        while i >= 0
+          zoomListeners[i]()
+          --i
+        return
+
+      setInterval pollZoomFireEvent, 100
+      return
