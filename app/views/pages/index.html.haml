@@ -10,9 +10,10 @@
           .row.text-center.details
             .col-xs-6#phone.text-center
               %p 24-Hour Phone:
-              %a{href: "tel:18475400955"} (847) 540-0955
+              %p
+                %a{href: "tel:18475400955"} (847) 540-0955
             .col-xs-6#area.text-center Chicago & Surrounding Suburbs
-  .row.nav#nav.text-center
+  .row.nav#nav.text-center.hidden-xs
     .col-sm-2.text-center.nav-items
       %a{ href: "#one"}
         .nav-item
@@ -126,19 +127,19 @@
       We all need to do our part to ensure the safety of our employees, our customers, their property and the general public we encounter daily. Through instructional classes, common sense practices, and the safety programs and policies that have been implemented, Pro-Tek Mechanical, Inc. strives to provide the safest work environment possible.
 %footer.footer
   .partner-companies.row.text-center
-    .col-sm-2.vertical-align
+    .col-sm-2.vertical-align.hidden-xs
       =link_to image_tag('pgc.png') , "http://humiditycontrol.com/", target: '_blank', id: 'pgc'
-    .col-sm-2.vertical-align
+    .col-sm-2.vertical-align.hidden-xs
       =link_to image_tag('lancer.png'), 'http://www.lancer.com/', target: '_blank', id: 'lancer'
     .col-sm-4.vertical-align
       .mailing-list-container
         %a.btn.btn-primary{"data-toggle" => "modal", :href => "#myModal"}
           Join our mailing list!
-    .col-sm-2.vertical-align
+    .col-sm-2.vertical-align.hidden-xs
       =link_to image_tag('greenbox.png'), 'http://www.greenboxchillers.com/', target: '_blank', id: 'greenbox'
-    .col-sm-2.vertical-align
+    .col-sm-2.vertical-align.hidden-xs
       =link_to image_tag('facebook.png'), 'https://www.facebook.com/Pro-Tek-Mechanical-Inc-179050278872381/', target: '_blank', id: 'facebook'
-  .sub-footer.row.text-center
+  .sub-footer.row.text-center.hidden-xs
     .col-sm-4#credit Design by Colleen McGuckin
     .col-sm-4 Copyright (c) 2016 Pro-Tek Mechanical, Inc. All Rights Reserved.
     .col-sm-4#gear.pull-right
@@ -158,75 +159,76 @@
 :coffee
   $ ->
 
-    windowScrollTop = ->
-      window.pageYOffset
+    if window.innerWidth > 760
+      windowScrollTop = ->
+        window.pageYOffset
 
-    Menu = ((scrollOffset) ->
-      `var Menu`
+      Menu = ((scrollOffset) ->
+        `var Menu`
 
-      Menu = ->
-        @element = document.getElementById('nav')
-        @element.className = 'docked'
-        @docked = false
-        @initialOffsetTop = 0
-        @resetInitialOffsetTop()
-        return
-
-      Menu.prototype =
-        offsetTop: ->
-          @element.offsetTop
-        resetInitialOffsetTop: ->
-          @initialOffsetTop = @offsetTop()
-          return
-        dock: ->
+        Menu = ->
+          @element = document.getElementById('nav')
           @element.className = 'docked'
-          @docked = true
-          return
-        undock: ->
-          @element.className = @element.className.replace('docked', 'undocked')
           @docked = false
+          @initialOffsetTop = 0
+          @resetInitialOffsetTop()
           return
-        toggleDock: ->
-          if @docked == false and @offsetTop() - scrollOffset() < 0
-            @dock()
-          else if @docked == true and scrollOffset() <= @initialOffsetTop
-            @undock()
-          return
-      Menu
-    )(windowScrollTop)
-    menu = new Menu
 
-    window.onscroll = ->
-      menu.toggleDock()
-      return
+        Menu.prototype =
+          offsetTop: ->
+            @element.offsetTop
+          resetInitialOffsetTop: ->
+            @initialOffsetTop = @offsetTop()
+            return
+          dock: ->
+            @element.className = 'docked'
+            @docked = true
+            return
+          undock: ->
+            @element.className = @element.className.replace('docked', 'undocked')
+            @docked = false
+            return
+          toggleDock: ->
+            if @docked == false and @offsetTop() - scrollOffset() < 0
+              @dock()
+            else if @docked == true and scrollOffset() <= @initialOffsetTop
+              @undock()
+            return
+        Menu
+      )(windowScrollTop)
+      menu = new Menu
 
-    updateMenuTop = ->
-      # Shortly dock to reset the initial Y-offset
-      menu.undock()
-      menu.resetInitialOffsetTop()
-      # If appropriate, undock again based on the new value
-      menu.toggleDock()
-      return
-
-    zoomListeners = [ updateMenuTop ]
-    do ->
-      w = window
-      d = document
-      e = d.documentElement
-      g = d.getElementsByTagName('body')[0]
-      lastWidth = 0
-
-      pollZoomFireEvent = ->
-        widthNow = w.innerWidth or e.clientWidth or g.clientWidth
-        if lastWidth == widthNow
-          return
-        lastWidth = widthNow
-        # Length changed, user must have zoomed, invoke listeners.
-        i = zoomListeners.length - 1
-        while i >= 0
-          zoomListeners[i]()
-          --i
+      window.onscroll = ->
+        menu.toggleDock()
         return
 
-      setInterval pollZoomFireEvent, 100
-      return
+      updateMenuTop = ->
+        # Shortly dock to reset the initial Y-offset
+        menu.undock()
+        menu.resetInitialOffsetTop()
+        # If appropriate, undock again based on the new value
+        menu.toggleDock()
+        return
+
+      zoomListeners = [ updateMenuTop ]
+      do ->
+        w = window
+        d = document
+        e = d.documentElement
+        g = d.getElementsByTagName('body')[0]
+        lastWidth = 0
+
+        pollZoomFireEvent = ->
+          widthNow = w.innerWidth or e.clientWidth or g.clientWidth
+          if lastWidth == widthNow
+            return
+          lastWidth = widthNow
+          # Length changed, user must have zoomed, invoke listeners.
+          i = zoomListeners.length - 1
+          while i >= 0
+            zoomListeners[i]()
+            --i
+          return
+
+        setInterval pollZoomFireEvent, 100
+        return

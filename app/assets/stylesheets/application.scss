@@ -249,3 +249,49 @@ body{
 abbr, accronym{
   border-bottom: 0px!important;
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .logo-img,  #company, #phone, #area{
+    margin: auto;
+    height: 100%;
+    text-align: center;
+  }
+  #company {
+    font-size: 20px;
+    text-align: center;
+  }
+  #phone p {
+    display: inline-block;
+  }
+  #area {
+    display: inline-block;
+  }
+  .nav, .nav-items, .nav-item {
+    visibility: hidden;
+    height: auto;
+    margin: auto;
+  }
+  .name ul li{
+    font-size: 10px;
+    margin:auto;
+    width: 100%;
+    display: inline-block;
+  }
+  .name ul li div{
+    font-size: 10px;
+    margin:auto;
+    width: 100%;
+    display: inline-block;
+
+  }
+  header {
+    display: block;
+    font-size: 10px;
+    margin:auto;
+    text-align: center;
+    width: 100%;
+  }
+  .footer {
+    background-color: transparent;
+    height: 60px;
+  }
+}
