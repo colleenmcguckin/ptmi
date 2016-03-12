@@ -1,26 +1,42 @@
 %header
   .info-container.row
-    .logo.col-xs-4
+    .logo.col-sm-4.text-center
       =image_tag 'ptmi-logo.png', class: 'logo-img'
     %span#one
-    .name.col-xs-8
-      .heading Pro-Tek Mechanical
-      .sub-heading 24-Hour Phone: 847 540 0955
-      .sub-text Chicago & Surrounding Suburbs
-  .nav#nav
-    %ul.nav.navbar-nav
-      %li
-        %a{ href: "#one"}Pharmaceutical/Lab
-      %li
-        %a{ href: "#two"}Commercial
-      %li
-        %a{ href: "#three"}Residential
-      %li
-        %a{ href: "#four"}About
-      %li
-        %a{ href: "#five"}Contact
-      %li
-        %a{ href: "#six"}Safety
+    .name.col-sm-8
+      %ul.text-center
+        %li#company Pro-Tek Mechanical
+        %li
+          .row.text-center.details
+            .col-xs-6#phone.text-center
+              %p 24-Hour Phone:
+              %a{href: "tel:18475400955"} (847) 540-0955
+            .col-xs-6#area.text-center Chicago & Surrounding Suburbs
+  .row.nav#nav.text-center
+    .col-sm-2.text-center.nav-items
+      %a{ href: "#one"}
+        .nav-item
+          Pharmaceutical/Lab
+    .col-sm-2.text-center
+      %a{ href: "#two"}
+        .nav-item
+          Commercial
+    .col-sm-2.text-center
+      %a{ href: "#three"}
+        .nav-item
+          Residential
+    .col-sm-2.text-center
+      %a{ href: "#four"}
+        .nav-item
+          About
+    .col-sm-2.text-center
+      %a{ href: "#five"}
+        .nav-item
+          Contact
+    .col-sm-2.text-center
+      %a{ href: "#six"}
+        .nav-item
+          Safety
 %body
   %span#two
   #slide1.container

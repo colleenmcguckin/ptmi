@@ -14,27 +14,28 @@
  @import "bootstrap";
 
  .logo, .name div{
-   display: inline-block;
    text-align: center;
 }
+.name ul {
+  text-decoration: none;
+  list-style: none;
+  width: 80%;
+}
 .logo-img{
-  width: 60%;
+  width: 100%;
   margin: auto;
+  height: 100%;
+  margin-left: 50px;
 }
 .info-container div{
   display: inline-block;
   padding-top: 20px;
 }
-.nav ul li{
-  display: inline-block;
-  text-align: center;
-  margin: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: -15px;
-}
 .nav{
   text-align: center;
+}
+.nav a{
+  margin: 10px;
 }
 header{
   box-shadow: 0px 0px 3px #888888;
@@ -71,39 +72,36 @@ body{
   z-index: -1;
   width: 80%;
 }
+#company{
+  font-size: 52px;
+  text-align: center;
+  color: #1D2150;
+  font-style: italic;
+  margin-bottom: -40px;
+}
 .heading{
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   color: #1D2150;
 }
 #nav.docked {
   position: fixed;
   top: 0px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #F5F5F5;
   width: 100%;
   box-shadow: 0px 0px 3px #888888;
   max-height: 70px;
   text-align: center;
 }
-#nav.undocked ul li{
-  display: inline-block;
-  text-align: center;
-  margin: auto;
-  padding: 30px;
-}
 #nav.undocked {
   width: 100%;
   max-height: 70px;
   text-align: center;
-}
-#nav ul li{
-  display: inline-block;
-  text-align: center;
-  margin: auto;
-  padding: 15px;
+  padding: 10px;
 }
 #nav.docked a.nav-item__link {
   color: #000;
+  padding: 15px;
 }
 #nav.docked .nav-item a:hover {
   background-color: rgba(255, 205, 0, 0.1);
@@ -114,9 +112,6 @@ body{
 .vertical-align {
   vertical-align: middle;
   margin-top: 15px;
-}
-#myModalHorizontal {
-  z-index: -3;
 }
 #pgc img{
   width: 50%;
@@ -135,4 +130,63 @@ body{
 }
 .partner-companies {
   margin: auto;
+}
+.nav-items {
+  text-align: center;
+}
+.nav-item{
+  color: #1D2150;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 10px;
+  vertical-align: middle;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.nav-items a{
+  text-decoration: none;
+  color: #1D2150;
+}
+.nav-items a:visited{
+  text-decoration: none;
+  color: #888;
+}
+.nav-items a:hover{
+  text-decoration: none;
+  color: #C30000;
+}
+#phone {
+  color: #C30000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 10px;
+  vertical-align: middle;
+}
+#area {
+  color: #1D2150;
+  text-transform: uppercase;
+  font-weight: semi-bold;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 15px;
+  vertical-align: middle;
+}
+.details ul li {
+  display: inline-block;
+}
+.details {
+  width: 100%;
+}
+#phone a {
+  text-decoration: none;
+  color: #C30000;
+}
+#phone a:hover {
+  text-decoration: underline;
+  color: #C30000;
+  font-style: italic;
 }
