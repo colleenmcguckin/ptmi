@@ -56,10 +56,12 @@ footer div ul li{
 }
 body{
   background-image: url('bg-image.png');
-  background-size: 1000px 800px;
   position: absolute;
   z-index: -2;
   height: 100%;
+}
+body img{
+  background-size: 1000px 800px;
 }
 .container{
   // background-color: white;
