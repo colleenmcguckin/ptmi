@@ -108,14 +108,17 @@
       Mailing Address
     .sub-text
       PRO-TEK MECHANICAL, INC.
+      %br
       740 TELSER RD.
+      %br
       LAKE ZURICH, IL. 60047
     .sub-heading
       Email
     .sub-text
-      info@pro-tekmechanical.com
-    %button.btn.btn-primary#contact_modal
-      Send Inquiry
+      =mail_to 'info@pro-tekmechanical.com', 'info@pro-tekmechanical.com'
+    .row.hidden
+      %button.btn.btn-primary.pull-right#contact_modal
+        Send Inquiry
   #slide6.container
     .heading Safety
     .sub-heading

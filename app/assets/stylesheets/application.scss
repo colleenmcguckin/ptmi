@@ -71,7 +71,7 @@ body{
   margin: 50px auto;
   padding: 25px;
   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   z-index: -1;
   width: 80%;
 }
@@ -86,6 +86,8 @@ body{
   text-align: center;
   font-size: 24px;
   color: #1D2150;
+  padding-bottom: 15px;
+  font-style: italic;
 }
 #nav.docked {
   position: fixed;
@@ -203,4 +205,17 @@ body{
   font-weight: semi-bold;
   font-size: 16px;
   padding:2px;
+}
+.sub-heading {
+  color: #666;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+#slide5 div.sub-text {
+  text-align: center;
+}
+#slide1 div.sub-heading {
+  text-align: left;
 }
