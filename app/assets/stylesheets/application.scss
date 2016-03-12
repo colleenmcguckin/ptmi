@@ -249,6 +249,9 @@ body{
 abbr, accronym{
   border-bottom: 0px!important;
 }
+.modal-footer{
+  border-top: none!important;
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .logo-img,  #company, #phone, #area{
     margin: auto;
