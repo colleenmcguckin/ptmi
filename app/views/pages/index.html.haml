@@ -149,12 +149,12 @@
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} x
-        %h4.modal-title Join Our Mailing List:
+        %h4.modal-title Stay In Touch:
       .modal-body
         = simple_form_for(@recipient, url: '/') do |form|
           =form.input :first_name
           =form.input :last_name
-          =form.input :email
+          =form.input :email, hint: "Pro-Tek respects your privacy. We won't sell your info to anyone or spam your inbox."
           =form.submit 'Sign Up!'
 :coffee
   $ ->
