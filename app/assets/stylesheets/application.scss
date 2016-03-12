@@ -64,6 +64,8 @@ body{
   position: absolute;
   z-index: -2;
   height: 100%;
+  margin-bottom: 100px;
+  clear: both;
 }
 .container{
   // background-color: white;
@@ -216,8 +218,11 @@ body{
 #slide5 div.sub-text {
   text-align: center;
 }
-#slide1 div.sub-heading {
+#slide4 div.sub-heading {
   text-align: left;
+}
+#slide6 {
+  margin-bottom: 120px;
 }
 #gear {
   text-align: right;
@@ -236,4 +241,7 @@ body{
   margin-bottom: 10px;
   font-size: 12px;
   margin-top: 5px;
+}
+#slide5 .sub-heading {
+  margin-top: 10px;
 }
