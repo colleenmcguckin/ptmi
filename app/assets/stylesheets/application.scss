@@ -241,7 +241,11 @@ body{
   margin-bottom: 10px;
   font-size: 12px;
   margin-top: 5px;
+  opacity: .35;
 }
 #slide5 .sub-heading {
   margin-top: 10px;
+}
+abbr, accronym{
+  border-bottom: 0px!important;
 }
