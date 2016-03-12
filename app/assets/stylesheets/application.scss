@@ -111,9 +111,28 @@ body{
 .mailing-list-container {
   display: block;
 }
-.partner-companies ul li {
-  display: inline-block;
+.vertical-align {
+  vertical-align: middle;
+  margin-top: 15px;
 }
 #myModalHorizontal {
   z-index: -3;
+}
+#pgc img{
+  width: 50%;
+  margin-top: -10px;
+}
+#lancer img{
+  width: 80%;
+  margin-top: 5px;
+}
+#greenbox img{
+  width: 100%;
+}
+#facebook img{
+  width: 25%;
+  margin-top: -3px;
+}
+.partner-companies {
+  margin: auto;
 }
