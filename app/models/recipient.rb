@@ -1,3 +1,3 @@
-class Recipient < ActiveRecord::Base
+class Recipient < ApplicationRecord 
   validates_presence_of :first_name, :last_name, :email
 end
